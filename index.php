@@ -17,25 +17,30 @@
    
 <div class="col-md-6 border border-success p-2 ">
 
+ <div id="msg">
+ 
+
+</div> 
+
 <div class="form-group">
     <label for="exampleInputEmail1">Your Full Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name"  name="fName">
+    <input type="text" class="form-control" id="fName" aria-describedby="emailHelp" placeholder="Enter Name"  >
     
   </div>
 
   <div class="form-group">
     <label for="exampleInputEmail1">Your User Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name"  name="uName">
+    <input type="text" class="form-control" id="uName" aria-describedby="emailHelp" placeholder="Enter Name"  name="">
     
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Your Email</label>
-    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter Email" name="email">
+    <input type="email" class="form-control" id="email" placeholder="Enter Email" >
   </div>
 
   <div class="form-group">
     <label for="exampleInputPassword1">Status</label>
-      <select class="form-control" name="status" id="">
+      <select class="form-control"  id="status">
         <option value="#">---Select--</option>
       <option value="1">Active</option>
       <option value="2">Inactive</option>
@@ -43,14 +48,17 @@
       </select>
   </div>
   
-  <button name="save" type="submit" class="btn btn-primary mt-3">Submit</button>
+  <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
 </form>
 
       </div>
      </div>
      </div>
    
-   
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+     <script src="./app.js"></script>
+
+    
 </body>
 </html>
