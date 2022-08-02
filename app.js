@@ -31,6 +31,11 @@ function insert(){
      
         success: function (response) {
             jQuery("#msg").html(response);
+            jQuery(".alert").fadeOut(3000);
+            jQuery("#status").val("");
+            jQuery("#email").val("");
+            jQuery("#uName").val("");
+            jQuery("#fName").val("");
         }
     });
 
