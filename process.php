@@ -78,8 +78,15 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
         global $con;
         $id=$_POST['id'];
 
-        $con->query("DELETE FROM tbl_student WHERE id='$id'");
+       $result= $con->query("DELETE FROM tbl_student WHERE id='$id'");
 
+      if($result){
+        echo '<div class="alert alert-danger">Date Delete Successfully</div>';
+      }
+      else{
+        echo '<div class="alert alert-danger">Date not  Deleted </div>';
+      }
+       
 
     }
 
@@ -97,6 +104,26 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
 
 
     }
+
+     function update(){
+        global $con;
+        $id=$_POST['id'];
+        $fName=$_POST['fName'];
+        $uName=$_POST['uName'];
+        $email=$_POST['email'];
+        $status=$_POST['status'];
+
+        $result= $con->query("UPDATE tbl_student SET fName='$fName', uName='$uName', email='$email', status='$status' WHERE id='$id' ");
+
+        if($result){
+          echo '<div class="alert alert-danger">Date update Successfully</div>';
+
+        }else{
+
+          echo '<div class="alert alert-danger">Date not updated </div>';
+        }
+
+     }
 
 
 

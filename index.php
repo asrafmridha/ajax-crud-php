@@ -20,7 +20,7 @@
  <div id="msg">
  
 
-</div> 
+</div>  
 
 <div class="form-group">
     <label for="exampleInputEmail1">Your Full Name</label>
@@ -41,7 +41,7 @@
   <div class="form-group">
     <label for="exampleInputPassword1">Status</label>
       <select class="form-control"  id="status">
-        <option value="#">---Select--</option>
+        <option value="0">---Select--</option>
       <option value="1">Active</option>
       <option value="2">Inactive</option>
       <option value="3">Suspend</option>
@@ -49,11 +49,13 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Your Email</label>
+    <label for="exampleInputPassword1">Your Id</label>
     <input type="text" class="form-control" id="id" placeholder="id" >
   </div>
   
   <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+
+  <button id="update" type="submit" class="btn btn-info mt-3">Update</button>
    
    
 

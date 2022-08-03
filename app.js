@@ -8,11 +8,19 @@ jQuery(document).ready(function(){
         
     });
 
-    jQuery(document).on("click","#findid",function(){
+    jQuery(document).on("click","#findid",function(e){
 
         var id=jQuery(this).val();
-        findid(id);
+         findid(id);
     })
+
+    jQuery("#update").click(function(){
+
+      update();
+
+
+
+    });
     
     
     });
@@ -88,12 +96,14 @@ jQuery(document).ready(function(){
            data:{
             check:check,
             id:id
+             
            } ,
            success: function (response) {
+           
+           
             show();
             jQuery("#msg").html(response);
-            
-            jQuery(".alert").fadeOut(3000);
+            jQuery("#msg").fadeOut(3000);
            }
        }); 
     }
@@ -105,11 +115,7 @@ jQuery(document).ready(function(){
 
     function findid(id){
         var check='findid';
-        // var fName=jQuery("#fName").val();
-        // var uName=jQuery("#uName").val();
-        // var email=jQuery("#email").val();
-        // var status=jQuery("#status").val();
-        // var id=jQuery("#findid").val();
+       
       
     
        $.ajax({
@@ -135,6 +141,49 @@ jQuery(document).ready(function(){
         
         });
     }
+
+    function update() {
+
+        var check='update';
+        var id=jQuery("#findid").val();
+        var fName=jQuery("#fName").val();
+        var uName=jQuery("#uName").val();
+        var email=jQuery("#email").val();
+        var status=jQuery("#status").val();
+   
+       
+    
+        $.ajax({
+     
+              url: "process.php",
+             type: "post",
+             
+             data:{
+              check:check,
+              id:id,
+              fName:fName,
+              uName:uName,
+              email:email,
+              status:status
+             
+     
+             } ,
+          
+             success: function (response) {
+                show();
+                 jQuery("#msg").html(response);
+                
+                
+             }
+         
+         });
+     }
+    
+         
+
+
+
+      
     
        
 
