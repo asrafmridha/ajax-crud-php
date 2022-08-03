@@ -55,7 +55,7 @@
   
   <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
 
-  <button id="update" type="submit" class="btn btn-info mt-3">Update</button>
+  <button id="update" type="submit" style="display: none;" class="btn btn-info mt-3">Update</button>
    
    
 

@@ -12,11 +12,17 @@ jQuery(document).ready(function(){
 
         var id=jQuery(this).val();
          findid(id);
+         jQuery('#update').show();
+         jQuery('#submit').hide();
     })
 
     jQuery("#update").click(function(){
 
       update();
+      jQuery('#submit').show();
+      jQuery('#update').hide();
+
+   
 
 
 
