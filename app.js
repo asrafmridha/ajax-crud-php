@@ -7,6 +7,12 @@ jQuery(document).ready(function(){
         insert();
         
     });
+
+    jQuery(document).on("click","#findid",function(){
+
+        var id=jQuery(this).val();
+        findid(id);
+    })
     
     
     });
@@ -82,25 +88,53 @@ jQuery(document).ready(function(){
            data:{
             check:check,
             id:id
-           
-   
            } ,
-        
-        
            success: function (response) {
             show();
             jQuery("#msg").html(response);
             
             jQuery(".alert").fadeOut(3000);
-           
-              
            }
-       
-       });
-
-        
+       }); 
     }
 
+
+
+
+
+
+    function findid(id){
+        var check='findid';
+        // var fName=jQuery("#fName").val();
+        // var uName=jQuery("#uName").val();
+        // var email=jQuery("#email").val();
+        // var status=jQuery("#status").val();
+        // var id=jQuery("#findid").val();
+      
+    
+       $.ajax({
+    
+             url: "process.php",
+            type: "post",
+            dataType:"JSON",
+            data:{
+             check:check,
+             id:id
+          
+    
+            } ,
+         
+            success: function (response) {
+
+                jQuery("#id").val(response.id);
+                jQuery("#status").val(response.status);
+                 jQuery("#email").val(response.email);
+                 jQuery("#uName").val(response.uName);
+                 jQuery("#fName").val(response.fName);
+            }
+        
+        });
+    }
     
        
 

@@ -56,7 +56,7 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
             <td>'.$data['uName'].'</td>
             <td>'.$data['email'].'</td>
             <td>'.$data['status'].'</td>
-            <td><button class"btn btn-info  ">Update</button> </td>
+            <td><button class"btn btn-info" id="findid" value="'.$data['id'].'">Update</button> </td>
             <td><button class"btn btn-info" onclick="deleteid('.$data['id'].')" >Delete</button> </td>
             </tr>';
         }
@@ -79,6 +79,21 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
         $id=$_POST['id'];
 
         $con->query("DELETE FROM tbl_student WHERE id='$id'");
+
+
+    }
+
+    function findid(){
+
+        global $con;
+        $id=$_POST['id'];
+
+       $result= $con->query("SELECT *FROM tbl_student WHERE id='$id'");
+
+       $res=$result->fetch_assoc();
+
+       echo json_encode($res);
+
 
 
     }

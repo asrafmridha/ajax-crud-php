@@ -47,6 +47,11 @@
       <option value="3">Suspend</option>
       </select>
   </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Your Email</label>
+    <input type="text" class="form-control" id="id" placeholder="id" >
+  </div>
   
   <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
    
