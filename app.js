@@ -1,6 +1,7 @@
 jQuery(document).ready(function(){
 
     show();
+ 
     jQuery("#submit").click(function(){
     
         insert();
@@ -65,9 +66,39 @@ jQuery(document).ready(function(){
             success: function (response) {
                 jQuery("#output").html(response);
                
+               
             }
         
         });
+    }
+
+    function deleteid(id){
+        var check='delete';
+        $.ajax({
+    
+            url: "process.php",
+           type: "post",
+           
+           data:{
+            check:check,
+            id:id
+           
+   
+           } ,
+        
+        
+           success: function (response) {
+            show();
+            jQuery("#msg").html(response);
+            
+            jQuery(".alert").fadeOut(3000);
+           
+              
+           }
+       
+       });
+
+        
     }
 
     

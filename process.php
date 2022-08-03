@@ -1,4 +1,6 @@
+
 <?php 
+
 
 $con=new mysqli("localhost","root", "", "ajax_crud");
 
@@ -38,6 +40,8 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
      <th>User Name</th>
      <th>Email</th>
      <th>Status</th>
+     <th>Action</th>
+
      
      
      
@@ -52,6 +56,8 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
             <td>'.$data['uName'].'</td>
             <td>'.$data['email'].'</td>
             <td>'.$data['status'].'</td>
+            <td><button class"btn btn-info  ">Update</button> </td>
+            <td><button class"btn btn-info" onclick="deleteid('.$data['id'].')" >Delete</button> </td>
             </tr>';
         }
         $output.='</table>';
@@ -64,6 +70,16 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
 
         echo "data not found";
      }
+
+    }
+
+    function delete(){
+
+        global $con;
+        $id=$_POST['id'];
+
+        $con->query("DELETE FROM tbl_student WHERE id='$id'");
+
 
     }
 
