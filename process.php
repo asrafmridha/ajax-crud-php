@@ -27,13 +27,45 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
        }
     }
 
-  
+    function show(){
+
+     global $con;
+
+     $result =$con->query("SELECT *FROM tbl_student");
+     $output= "<table class='table' border='1'> <tr>
+     
+     <th>First Name</th>
+     <th>User Name</th>
+     <th>Email</th>
+     <th>Status</th>
+     
+     
+     
+     </tr> ";
+     if($result->num_rows>0){
+          
+        while($data=$result->fetch_assoc()){
+
+            $output.='<tr>
+            
+            <td>'.$data['fName'].'</td>
+            <td>'.$data['uName'].'</td>
+            <td>'.$data['email'].'</td>
+            <td>'.$data['status'].'</td>
+            </tr>';
+        }
+        $output.='</table>';
+        echo $output;
+
+     }
+     else{
 
 
 
+        echo "data not found";
+     }
 
-
-
+    }
 
 
 
