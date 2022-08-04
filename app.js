@@ -138,11 +138,11 @@ jQuery(document).ready(function(){
          
             success: function (response) {
 
-                jQuery("#id").val(response.id);
-                jQuery("#status").val(response.status);
-                 jQuery("#email").val(response.email);
-                 jQuery("#uName").val(response.uName);
-                 jQuery("#fName").val(response.fName);
+                jQuery(".id").val(response.id);
+                jQuery(".status").val(response.status);
+                 jQuery(".email").val(response.email);
+                 jQuery(".uName").val(response.uName);
+                 jQuery(".fName").val(response.fName);
             }
         
         });

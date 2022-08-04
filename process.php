@@ -56,7 +56,7 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
             <td>'.$data['uName'].'</td>
             <td>'.$data['email'].'</td>
             <td>'.$data['status'].'</td>
-            <td><button class"btn btn-info" id="findid" value="'.$data['id'].'">Update</button> </td>
+            <td><button class"btn btn-info" data-bs-toggle="modal" data-bs-target="#updatemodal" id="findid" value="'.$data['id'].'">Update</button> </td>
             <td><button class"btn btn-info" onclick="deleteid('.$data['id'].')" >Delete</button> </td>
             </tr>';
         }
@@ -100,6 +100,7 @@ $con=new mysqli("localhost","root", "", "ajax_crud");
        $res=$result->fetch_assoc();
 
        echo json_encode($res);
+  
 
 
 
