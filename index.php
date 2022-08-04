@@ -101,7 +101,7 @@
 
  <div class="form-group">
    <label for="exampleInputEmail1">Your User Name</label>
-   <input type="text" class="form-control "aria-describedby="emailHelp" placeholder="Enter Name"  name="" class="uName">
+   <input type="text" class="form-control uName"aria-describedby="emailHelp" placeholder="Enter Name"  name="" >
    
  </div>
  <div class="form-group">
@@ -124,24 +124,9 @@
    <input type="text" class="form-control id" placeholder="id" >
  </div>
  
- <button id="updatebutton" type="submit" class="btn btn-primary mt-3">Submit</button>
-
- <button id="update" type="submit" style="display: none;" class="btn btn-info mt-3">Update</button>
-  
-
-
-
-
-
-
-
-
-
-      
-    
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="updateuserbutton">update</button>
       </div>
     </div>
   </div>

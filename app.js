@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
          jQuery('#submit').hide();
     })
 
-    jQuery("#update").click(function(){
+    jQuery("#updateuserbutton").click(function(){
 
       update();
       jQuery('#submit').show();
@@ -152,10 +152,10 @@ jQuery(document).ready(function(){
 
         var check='update';
         var id=jQuery("#findid").val();
-        var fName=jQuery("#fName").val();
-        var uName=jQuery("#uName").val();
-        var email=jQuery("#email").val();
-        var status=jQuery("#status").val();
+        var fName=jQuery(".fName").val();
+        var uName=jQuery(".uName").val();
+        var email=jQuery(".email").val();
+        var status=jQuery(".status").val();
    
        
     
