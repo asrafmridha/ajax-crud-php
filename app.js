@@ -14,7 +14,18 @@ jQuery(document).ready(function(){
          findid(id);
          jQuery('#update').show();
          jQuery('#submit').hide();
-    })
+    });
+
+    jQuery(document).on("click","#deleteeid",function(e){
+        var id=jQuery(this).val();
+        jQuery("#btndel").val(id);
+    });
+
+    jQuery(document).on("click","#btndel",function(e){
+        var id=jQuery(this).val();
+         deleteid(id);
+         
+    });
 
     jQuery("#update").click(function(){
 

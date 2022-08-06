@@ -75,68 +75,10 @@
      </div>
 
 
-<!-- Button trigger modal for update -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
-<div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-     
 
 
-<div class="form-group">
-   <label for="exampleInputEmail1">Your Full Name</label>
-   <input type="text" class="form-control fName" aria-describedby="emailHelp" placeholder="Enter Name"  >
-   
- </div>
-
- <div class="form-group">
-   <label for="exampleInputEmail1">Your User Name</label>
-   <input type="text" class="form-control uName"aria-describedby="emailHelp" placeholder="Enter Name"  name="" >
-   
- </div>
- <div class="form-group">
-   <label for="exampleInputPassword1">Your Email</label>
-   <input type="email" class="form-control email" placeholder="Enter Email" >
- </div>
-
- <div class="form-group">
-   <label for="exampleInputPassword1">Status</label>
-     <select class="form-control status"  >
-       <option value="0">---Select--</option>
-     <option value="1">Active</option>
-     <option value="2">Inactive</option>
-     <option value="3">Suspend</option>
-     </select>
- </div>
-
- <div class="form-group">
-   <label for="exampleInputPassword1">Your Id</label>
-   <input type="text" class="form-control id" placeholder="id" >
- </div>
- 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="updateuserbutton">update</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- delete modal -->
-
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="deletemodal" data-bs-target="#exampleModal">
   Launch demo modal
 </button> -->
 
@@ -153,11 +95,12 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" value="" id="btndel">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+
 
 
 
