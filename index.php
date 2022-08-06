@@ -48,10 +48,10 @@
       </select>
   </div>
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="exampleInputPassword1">Your Id</label>
     <input type="text" class="form-control" id="id" placeholder="id" >
-  </div>
+  </div> -->
   
   <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
 
@@ -125,13 +125,39 @@
  </div>
  
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="updateuserbutton">update</button>
       </div>
     </div>
   </div>
 </div>
 
+
+<!-- delete modal -->
+
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

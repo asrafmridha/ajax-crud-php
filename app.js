@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
         
     });
 
-    jQuery(document).on("click","#findid",function(e){
+    jQuery(document).on("click","#updateid",function(e){
 
         var id=jQuery(this).val();
          findid(id);
@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
          jQuery('#submit').hide();
     })
 
-    jQuery("#updateuserbutton").click(function(){
+    jQuery("#update").click(function(){
 
       update();
       jQuery('#submit').show();
@@ -54,6 +54,7 @@ jQuery(document).ready(function(){
             } ,
          
             success: function (response) {
+                
                 show();
                 jQuery("#msg").html(response);
                 jQuery(".alert").fadeOut(3000);
@@ -97,7 +98,7 @@ jQuery(document).ready(function(){
         $.ajax({
     
             url: "process.php",
-           type: "post",
+            type: "post",
            
            data:{
             check:check,
@@ -105,8 +106,6 @@ jQuery(document).ready(function(){
              
            } ,
            success: function (response) {
-           
-           
             show();
             jQuery("#msg").html(response);
             jQuery("#msg").fadeOut(3000);
@@ -121,9 +120,6 @@ jQuery(document).ready(function(){
 
     function findid(id){
         var check='findid';
-       
-      
-    
        $.ajax({
     
              url: "process.php",
@@ -137,12 +133,13 @@ jQuery(document).ready(function(){
             } ,
          
             success: function (response) {
-
-                jQuery(".id").val(response.id);
-                jQuery(".status").val(response.status);
-                 jQuery(".email").val(response.email);
-                 jQuery(".uName").val(response.uName);
-                 jQuery(".fName").val(response.fName);
+              
+              
+                jQuery("#findid").val(response.id);
+                jQuery("#status").val(response.status);
+                 jQuery("#email").val(response.email);
+                 jQuery("#uName").val(response.uName);
+                 jQuery("#fName").val(response.fName);
             }
         
         });
@@ -151,11 +148,11 @@ jQuery(document).ready(function(){
     function update() {
 
         var check='update';
-        var id=jQuery("#findid").val();
-        var fName=jQuery(".fName").val();
-        var uName=jQuery(".uName").val();
-        var email=jQuery(".email").val();
-        var status=jQuery(".status").val();
+        var id=jQuery("#updateid").val();
+        var fName=jQuery("#fName").val();
+        var uName=jQuery("#uName").val();
+        var email=jQuery("#email").val();
+        var status=jQuery("#status").val();
    
        
     
@@ -176,8 +173,15 @@ jQuery(document).ready(function(){
              } ,
           
              success: function (response) {
-                show();
-                 jQuery("#msg").html(response);
+                  show();
+
+                  jQuery("#findid").val();
+                  jQuery("#fName").val();
+                  jQuery("#uName").val();
+                  jQuery("#email").val();
+                  jQuery("#status").val();
+                  jQuery("#msg").html(response);
+                
                 
                 
              }
